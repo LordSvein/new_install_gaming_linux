@@ -81,7 +81,7 @@ do
         snap
         gamingFlatpak
         kernelTKGArch
-        if [ "$graphiqueCards" = "NVIDIA Corporation" ] ;
+        if [ "$graphiqueCards" = "OpenGL vendor string: NVIDIA Corporation" ] ;
         then
             nvidiaALL
         fi
