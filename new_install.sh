@@ -49,6 +49,14 @@ cd .tmp
 cd ..
 }
 
+function snapdInstall(){
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+sudo systemctl enable --now snapd.socket
+cd ..
+}
+
 function snap(){
 ##Snap
 sudo snap install deckboard
@@ -68,7 +76,8 @@ do
 
         ####Software Installer
         ##Natif
-        sudo pacman -Syyuu --noconfirm  base-devel flatpak snapd keepassxc steam latte-dock nextcloud-client kvantum zenity
+        sudo pacman -Syyuu --noconfirm  base-devel flatpak keepassxc steam latte-dock nextcloud-client kvantum zenity
+        snapdInstall
         snap
         gamingFlatpak
         kernelTKGArch
