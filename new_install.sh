@@ -1,7 +1,7 @@
 #!/bin/bash
 
 distro=$(lsb_release -ds | tr -d '"')
-
+graphiqueCards=$(glxinfo|egrep "OpenGL vendor")
 
 
 declare -a arch=( 'Manjaro Linux' "EndeavourOS Linux" )
@@ -55,7 +55,10 @@ do
         snap
         gamingFlatpak
         kernelTKG
-        nvidiaALL
+         if [ "$graphiqueCards" = "NVIDIA Corporation" ] ;
+        then
+            nvidiaALL
+        fi
     fi
 
 done
