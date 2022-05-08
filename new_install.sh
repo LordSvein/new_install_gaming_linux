@@ -4,7 +4,7 @@ distro=$(lsb_release -ds | tr -d '"')
 graphiqueCards=$(glxinfo|egrep "OpenGL vendor")
 
 
-declare -a arch=( 'Manjaro Linux' "EndeavourOS Linux" )
+declare -a arch=( 'Manjaro Linux' "EndeavourOS Linux" "Arch Linux" )
 declare -a ubuntu=( "Ubuntu 22.04 LTS" "Ubuntu 20.04 LTS" )
 declare -a zorin=( "Zorin OS 16.1" "Zorin OS 15.1" )
 
