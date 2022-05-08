@@ -8,13 +8,23 @@ declare -a arch=( 'Manjaro Linux' "EndeavourOS Linux" "Arch Linux" )
 declare -a ubuntu=( "Ubuntu 22.04 LTS" "Ubuntu 20.04 LTS" )
 declare -a zorin=( "Zorin OS 16.1" "Zorin OS 15.1" )
 
-function kernelTKG()
+function kernelTKGArch()
 {
 ##Frogging-Familly // CPU
 cd .tmp
     git clone https://github.com/Frogging-Family/linux-tkg.git
 	cd linux-tkg
 	makepkg -si
+cd ..
+}
+
+function kernelTKGother()
+{
+##Frogging-Familly // CPU
+cd .tmp
+    git clone https://github.com/Frogging-Family/linux-tkg.git
+	cd linux-tkg
+	./install.sh install
 cd ..
 }
 
@@ -54,7 +64,7 @@ do
         sudo pacman -Syyuu --noconfirm  base-devel flatpak snapd keepassxc steam latte-dock nextcloud-client kvantum zenity
         snap
         gamingFlatpak
-        kernelTKG
+        kernelTKGArch
          if [ "$graphiqueCards" = "NVIDIA Corporation" ] ;
         then
             nvidiaALL
@@ -72,7 +82,7 @@ do
         sudo apt install --noconfirm  build-essential git flatpak snapd keepassxc steam latte-dock nextcloud-client kvantum zenity
         snap
         gamingFlatpak
-        kernelTKG
+        kernelTKGother
     fi
 done
 
@@ -85,7 +95,7 @@ do
         sudo apt install --noconfirm  build-essential git flatpak snapd keepassxc steam nextcloud-client zenity
         snap
         gamingFlatpak
-        kernelTKG
+        kernelTKGother
     fi
 done
 
