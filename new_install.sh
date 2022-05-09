@@ -44,7 +44,7 @@ function gamingFlatpak()
 cd .tmp
     git clone https://github.com/Chevek/Gaming-Flatpak.git
     cd Gaming-Flatpak
-    sudo chmod+X gaming-flatpak.sh
+    sudo chmod +X gaming-flatpak.sh
     ./gaming-flatpak.sh
 cd ..
 }
