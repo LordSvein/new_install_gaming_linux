@@ -76,9 +76,7 @@ do
 
         ####Software Installer
         ##Natif
-        sudo pacman -Syyuu --noconfirm  base-devel flatpak keepassxc steam latte-dock nextcloud-client kvantum zenity
-        snapdInstall
-        snap
+        sudo pacman -Syyuu --noconfirm  base-devel flatpak keepassxc latte-dock nextcloud-client kvantum zenity 
         gamingFlatpak
         kernelTKGArch
         if [ "$graphiqueCards" = "OpenGL vendor string: NVIDIA Corporation" ] ;
